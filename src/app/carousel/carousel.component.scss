@@ -1,0 +1,59 @@
+$elementBg: #00FF66;
+$elementBorder: #006622;
+
+.carousel-wrapper {
+    width: 100%;
+    display: inline-block;
+    background-color: white;
+    padding: 24px 0px 24px 0px;
+}
+
+#frame {
+    overflow: hidden;
+    white-space: nowrap;
+    font-size: 0px;
+    box-sizing: content-box;
+    width: 100%;
+    text-align: left;
+}
+
+#frame > div {
+    font-size: 16px;
+    font-size: 1rem; //needs non-css3 cross browser fallback
+    display: inline-block;
+    border: 1px solid $elementBorder;
+    width: 200px;
+    height: auto;
+    box-sizing: border-box;
+    background-color: $elementBg;
+    position: relative;
+}
+
+.relative {
+    width: 25% !important;
+    min-width: 200px;
+    max-width: 320px;
+}
+
+#frame > div > img {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+#frame > div > .overlay {
+    color: black;
+    width: 100%;
+    height: 40px;
+    text-align: center;
+    white-space: normal;
+    background-color: rgba(200, 200, 200, 0.5);
+    font-weight: bold;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+#footer {
+    margin-top: 16px;
+}

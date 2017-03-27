@@ -1,0 +1,12 @@
+<div class="carousel-wrapper">
+    <div id="frame" #frame>
+        <div *ngFor="let r of randomIndex; let i = index" [ngClass]="{'relative': relativeSizes}" #slide>
+            <img src="{{buildUrl(data[i].images[r])}}" />
+            <div class="overlay">{{data[i].title}}</div>
+        </div>
+    </div>
+    <div id="footer">
+        <button [disabled]="firstActive === 0" (click)="shift(-1)">Previous</button>
+        <button [disabled]="!(lastActive < data.length - 1)" (click)="shift(1)">Next</button>
+    </div>
+</div>
